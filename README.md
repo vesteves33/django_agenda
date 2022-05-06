@@ -1,1 +1,1 @@
-# django_proj
+# Projeto Django
