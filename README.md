@@ -1,15 +1,17 @@
-# Projeto Django
+# Agenda
+Projeto de uma agenda com django
 
+## Config environment project:
 
-Config environment project:
-Instale Docker
-Instale Docker-compose
+#### Instale Docker
+#### Instale Docker-compose
 
+``` docker-compose build
 
-Migrate:
+``` docker-compose up
 
-python manage.py makemigrations
+``` docker-compose run web python manage.py makemigrations
 
-python manage.py migrate
+``` docker-compose run web python manage.py migrate
 
-run server python manage.py runserver
+``` docker-compose run web python manage.py createsuperuser
