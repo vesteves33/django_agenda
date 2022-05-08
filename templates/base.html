@@ -3,20 +3,18 @@
 <html lang="pt">
 
 <head>
-
-  <title>Agenda</title>
-
+  <title>{% block title %}{% endblock %}Agenda</title>
   {% include 'parcials/_head.html' %}
 </head>
 
 <body>
-
   {% include 'parcials/_navbar.html' %}
-
   <!-- Page Content -->
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
+       
+       {% if 'accounts' not in request.path %}
         <br><br>
         <form method="get" action="{% url 'search' %}">
         <div class="form-group row">
@@ -26,9 +24,8 @@
               id="search-input"
               placeholder="Digite sua pesquisa"
               name="search">
-        
+        {% endif %} 
   {% include 'parcials/_messages.html' %}
-      
     </div>
   </div>
 </form>
